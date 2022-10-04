@@ -127,7 +127,7 @@ sudo systemctl restart $SUBSPACE_ACCOUNT
 sudo systemctl restart $SUBSPACE_ACCOUNT-farmer
 ```
 
-Установка 1 ноды завершена.
+
 
 
 ### Проверить логи ноды и фармера 1
@@ -135,7 +135,12 @@ sudo systemctl restart $SUBSPACE_ACCOUNT-farmer
 ```
 journalctl -u subspace1 -f -o cat
 journalctl -u subspace1-farmer -f -o cat
+
 ```
+
+> обращаем внимание на цифру в командах - она означает порядковый номер вашей ноды.
+
+
 Успешный вывод ноды
 
 ![](https://i.imgur.com/Ro7IlWg.png)
@@ -144,7 +149,9 @@ journalctl -u subspace1-farmer -f -o cat
 
 ![](https://i.imgur.com/lxIxnIC.png)
 
-> обращаем внимание на цифру в командах - она означает порядковый номер вашей ноды.
+
+
+Установка 1 ноды завершена.
 
 После установки 1 ноды, для того, чтобы начать установку 2 ноды, нам необходимо снова задать переменные, поэтому повторяем действия из шага *Устанавливаем переменные*, подставив свое *Имя Ноды, Кошелек, Порты и порядковый номер ноды* _(subspace1, subspace2,... subspace5)_
 
@@ -180,7 +187,7 @@ rm -rf /usr/local/bin/subspace1
 Опять обращаем внимание на цифры. Для последуюих нод меняем ее на нужную. Например для ноды 2:
 
 ```
-#sudo systemctl stop subspace1 subspace21-farmer
+#sudo systemctl stop subspace1 subspace2-farmer
 #sudo systemctl disable subspace1 subspace2-farmer
 #rm -rf /root/.local/share/subspace2
 #rm -rf /etc/systemd/system/subspace2
