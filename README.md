@@ -5,7 +5,7 @@
 
 [Официальный гайд](https://docs.subspace.network/protocol/farm/farming/)
 
-Официальные требования для 1 ноды с размером plot 100 GB.
+Требования из документации для 1 ноды с размером plot 100 GB.
 
 
 Hardware  | Specs
@@ -21,6 +21,8 @@ Storage | 150GB
 >• синхронизированная нода потребляет порядка 5 Мбит траффика
 
 >• будьте внимательны и следите за потреблением ресурсов ваших серверов, после достижения определенных лимитов траффика на некоторых хостингах может взиматься дополнительная плата!
+
+![](https://i.imgur.com/tuSI1el.png)
 
 ## Установка
 ### Устанавливаем переменные
@@ -151,17 +153,19 @@ journalctl -u subspace1-farmer -f -o cat
 ```
 journalctl -u subspace2 -f -o cat
 journalctl -u subspace2-farmer -f -o cat
+```
 
 ### Проверить логи ноды и фармера 3
 
 ```
 journalctl -u subspace3 -f -o cat
 journalctl -u subspace3-farmer -f -o cat
-
+```
 
 ### Удаление 
 
 Останавливаем работу
+
 ```
 sudo systemctl stop subspace1 subspace1-farmer
 sudo systemctl disable subspace1 subspace1-farmer
